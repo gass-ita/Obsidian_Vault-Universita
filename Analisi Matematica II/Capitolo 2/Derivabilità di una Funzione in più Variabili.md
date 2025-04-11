@@ -80,3 +80,4 @@ f \text{  è differenziabile in } \bar{x} \Rightarrow \text{ è continua e } \fr
 
 
 ### Teorema del Differenziale Totale
+test
