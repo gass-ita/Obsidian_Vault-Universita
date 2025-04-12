@@ -80,4 +80,54 @@ f \text{  è differenziabile in } \bar{x} \Rightarrow \text{ è continua e } \fr
 
 
 ### Teorema del Differenziale Totale
-test
+Sia $f: A \subset \mathbb R^n \to \mathbb R$ e sia $\bar x \in A$
+Supponiamo che
+$$\exists \delta > 0: \quad f \ \text{sia derivabile in} \ B_\delta(\bar x)$$
+Supponiamo inoltre che _tutte_ le derivate parziali siano continue in $\bar x$
+Allora $f$ è _differenziabile_ in $\bar x$
+##### Dimostrazione
+Dimostreremo questo teorema con $n = 2$, si ha quindi che:
+$$f: A \subset \mathbb R^2 \to \mathbb R$$
+e abbiamo le derivate parziali continue in $\bar x$ 
+Ricordiamo che quello che dobbiamo dimostrare è che:
+$$\boxed{\lim_{x \to \bar x} \frac{f(x) - f(\bar x) - \nabla f(\bar x) (x - \bar x)}{\| x - \bar x\|} = 0}$$
+Chiamiamo $x = (x_1, x_2)$ e $\bar x = (\bar x_1, \bar x_2)$
+Osserviamo che
+$$f(x) - f(\bar x) = f(x_1, x_2) - f(\bar x_1, \bar x_2)$$
+Sommando e sottraendo la quantità $f(x_1, \bar x_2)$ si ha che:
+$$f(x_1, x_2) - f(\bar x_1, \bar x_2) = \boxed{f(x_1, x_2) - f(x_1, \bar x_2)} \boxed{- f(\bar x_1, \bar x_2) + f(x_1, \bar x_2)}$$
+occupiamoci adesso del primo quadrato, osserviamo che $x_1$ è fissato chiamiamo $g_1(t) = f(x_1, t)$ osserviamo che la derivata $\frac{d}{dt} g_1(t) = \frac{\partial f}{\partial x_2} f(x_1, t)$
+osserviamo che il primo quadrato è esprimibile quindi come
+$$g_1(x_2) - g_1(\bar x_2)$$
+poiché si tratta adesso di una funzione in una variabile posso applicare adesso il _teorema di Lagrange_
+$$g_1(x_2) - g_1(\bar x_2) = g_1'(\xi_2)(x_2 - \bar x_2) \quad \exists \xi_2 \in (x_2, \bar x_2)$$
+Similmente posso esprimere $g_2(t) = f(t, \bar x_2)$ e esprimere il secondo quadrato come e applicando il teorema di Lagrange
+$$g_2(x_1) - g_2(\bar x_1) = g_2'(\xi_1)(x_1 - \bar x_1) \quad \exists \xi_1 \in (x_1 , \bar x_1)$$
+e dunque si ha che:
+$$\boxed{f(x_1, x_2) - f(\bar x_1, \bar x_2) = \frac{\partial f}{\partial x_2}(x_1, \xi_2)(x_2 - \bar x_2) + \frac{\partial f}{\partial x_1}(\xi_1, \bar x_2)(x_1 - \bar x_1)}$$
+Consideriamo adesso la componente fornita dal _gradiente_:
+$$\nabla f(\bar x)(x - \bar x) = \left(\frac{\partial f}{\partial x_1}(\bar x_1, \bar x_2), \frac{\partial f}{\partial x_2}(\bar x_1, \bar x_2)\right)(x_1 - \bar x_1, x_2 - \bar x_2)$$
+Svolgendo il prodotto vettoriale si ha
+$$\left(\frac{\partial f}{\partial x_1}(\bar x_1, \bar x_2), \frac{\partial f}{\partial x_2}(\bar x_1, \bar x_2)\right)(x_1 - \bar x_1, x_2 - \bar x_2) = \frac{\partial f}{\partial x_1}(\bar x_1, \bar x_2)(x_1 - \bar x_1) + \frac{\partial f}{\partial x_2}(\bar x_1, \bar x_2)(x_2 - \bar x_2)$$
+E quindi che:
+$$\boxed{\nabla f(\bar x)(x - \bar x) = \frac{\partial f}{\partial x_1}(\bar x_1, \bar x_2)(x_1 - \bar x_1) + \frac{\partial f}{\partial x_2}(\bar x_1, \bar x_2)(x_2 - \bar x_2)}$$
+Mettendo insieme tutti i pezzi abbiamo che
+$$f(x_1, x_2) - f(\bar x_1, \bar x_2) - \nabla f(\bar x)(x - \bar x) = $$
+$$= \frac{\partial f}{\partial x_2}(x_1, \xi_2)(x_2 - \bar x_2) + \frac{\partial f}{\partial x_1}(\xi_1, \bar x_2)(x_1 - \bar x_1) - \frac{\partial f}{\partial x_1}(\bar x_1, \bar x_2)(x_1 - \bar x_1) - \frac{\partial f}{\partial x_2}(\bar x_1, \bar x_2)(x_2 - \bar x_2) = $$
+Raccogliendo si ha che 
+$$
+(x_2 - \bar x_2)\left[\frac{\partial f}{\partial x_2}(x_1, \xi_2) - \frac{\partial f}{\partial x_2}(\bar x_1, \bar x_2)\right] + (x_1 - \bar x_1)\left[\frac{\partial f}{\partial x_1}(\xi_1, \bar x_2) - \frac{\partial f}{\partial x_1}(\bar x_1, \bar x_2)\right]
+$$
+si ha quindi che ci resta da dimostrare che:
+$$\lim_{x \to \bar x}\frac{(x_2 - \bar x_2)\left[\frac{\partial f}{\partial x_2}(x_1, \xi_2) - \frac{\partial f}{\partial x_2}(\bar x_1, \bar x_2)\right] + (x_1 - \bar x_1)\left[\frac{\partial f}{\partial x_1}(\xi_1, \bar x_2) - \frac{\partial f}{\partial x_1}(\bar x_1, \bar x_2)\right]}{\sqrt{(x_1 - \bar x_1)^2 + (x_2 - \bar x_2)^2}} = 0$$
+Chiamiamo $R_1$ e $R_2$ le quantità tra parentesi quadra e osserviamo che per $x \to \bar x$ 
+$$R_1 \to 0 \quad e \quad R_2 \to 0$$
+questo per la continuità delle derivate e perché al tendere di $x \to \bar x$ si ha che $\xi_1 \to \bar x_1$ e $\xi_2 \to \bar x_2$.
+Inoltre osserviamo che:
+$$\left| 
+\frac{(x_1 - \bar{x}_1)}{\sqrt{(x_1 - \bar{x}_1)^2 + (x_2 - \bar{x}_2)^2}} 
+\right| < 1
+$$
+poiché possiamo vederlo come un _cateto_ fratto una _ipotenusa_.
+Si ha quindi la somma tra un prodotto tra una quantità _infinitesima_ $(R_1 \ \text{e} \  R_2)$ per una limitata e quindi il limite risulta 0.
+$\square$

@@ -4,31 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "c0c48e564b480d1f",
+        "id": "675ec3f1080a01d2",
         "type": "tabs",
         "children": [
           {
-            "id": "98eb4f5bd04013ac",
+            "id": "7c9a19231f2e5bad",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "split-diff-view",
               "state": {
-                "file": "Analisi Matematica II/Capitolo 2/Derivabilità di una Funzione in più Variabili.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
+                "aFile": ".obsidian/workspace.json",
+                "bFile": ".obsidian/workspace.json",
+                "aRef": ""
               },
-              "icon": "lucide-file",
-              "title": "Derivabilità di una Funzione in più Variabili"
+              "icon": "diff",
+              "title": "Diff: workspace.json"
             }
           }
         ]
@@ -104,7 +94,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Analisi Matematica II/Capitolo 2/Derivabilità di una Funzione in più Variabili.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -114,7 +103,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for Derivabilità di una Funzione in più Variabili"
+              "title": "Backlinks"
             }
           },
           {
@@ -152,13 +141,12 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Analisi Matematica II/Capitolo 2/Derivabilità di una Funzione in più Variabili.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Derivabilità di una Funzione in più Variabili"
+              "title": "Outline"
             }
           },
           {
@@ -193,13 +181,13 @@
       "obsidian-livesync:Show Customization sync": false
     }
   },
-  "active": "72f77f8a5fce1820",
+  "active": "7c9a19231f2e5bad",
   "lastOpenFiles": [
+    "Analisi Matematica II/Capitolo 2/Derivabilità di una Funzione in più Variabili.md",
+    "Analisi Matematica II/Capitolo 2/Continuità di una funzione in più Variabili.md",
     "Analisi Matematica II/Capitolo 4/Successioni di Funzioni.md",
     "Analisi Matematica II/Capitolo 4/Serie di Fourier.md",
-    "Analisi Matematica II/Capitolo 2/Derivabilità di una Funzione in più Variabili.md",
     "Fisica I/Formulario di Fisica 1.md",
-    "Analisi Matematica II/Capitolo 2/Continuità di una funzione in più Variabili.md",
     "continua.md",
     "Sas.md",
     "Twew+.md",
