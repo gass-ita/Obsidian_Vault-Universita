@@ -4,21 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "675ec3f1080a01d2",
+        "id": "85d07f0c00b8e165",
         "type": "tabs",
         "children": [
           {
-            "id": "7c9a19231f2e5bad",
+            "id": "99ac2f13b4cc6ee3",
             "type": "leaf",
             "state": {
               "type": "split-diff-view",
               "state": {
-                "aFile": ".obsidian/workspace.json",
-                "bFile": ".obsidian/workspace.json",
+                "aFile": ".obsidian/plugins/obsidian-livesync/data.json",
+                "bFile": ".obsidian/plugins/obsidian-livesync/data.json",
                 "aRef": ""
               },
               "icon": "diff",
-              "title": "Diff: workspace.json"
+              "title": "Diff: data.json"
             }
           }
         ]
@@ -94,6 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "Analisi Matematica II/Capitolo 2/Derivabilità di una Funzione in più Variabili.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +104,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks"
+              "title": "Backlinks for Derivabilità di una Funzione in più Variabili"
             }
           },
           {
@@ -141,12 +142,13 @@
             "state": {
               "type": "outline",
               "state": {
+                "file": "Analisi Matematica II/Capitolo 2/Derivabilità di una Funzione in più Variabili.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline"
+              "title": "Outline of Derivabilità di una Funzione in più Variabili"
             }
           },
           {
@@ -181,7 +183,7 @@
       "obsidian-livesync:Show Customization sync": false
     }
   },
-  "active": "7c9a19231f2e5bad",
+  "active": "99ac2f13b4cc6ee3",
   "lastOpenFiles": [
     "Analisi Matematica II/Capitolo 2/Derivabilità di una Funzione in più Variabili.md",
     "Analisi Matematica II/Capitolo 2/Continuità di una funzione in più Variabili.md",
