@@ -1,0 +1,39 @@
+Sia $(f_k)$ una serie di funzioni con $k \in \mathbb N$ con $f_k : A \subset R \to R$, scriveremo che $$\sum_{k = 0}^\infty f_k$$
+- Converge _puntualmente_ alla funzione $S(x): A' \to \mathbb R$ sull'insieme $A' \in A$ se:
+$$\forall x \in A' \quad S_n(x) \to S(x)$$
+	Ovvero che:
+	$$\forall x \in A' \quad \forall \epsilon > 0 \quad \exists \bar k \in \mathbb N \quad \forall k > \bar k \quad |S_k(x) - S(x)| < \epsilon$$
+- [[Successioni di Funzioni|Converge uniformemente]] alla funzione $f$ se $S_n \xrightarrow{unif} f$ su un insieme $A' \subset A$.
+	Ovvero che:
+	$$\forall \epsilon > 0 \quad \exists \bar k \in \mathbb N \quad \forall k > \bar k \quad |S_k(x) - f(x)| < \epsilon \quad \forall x \in A'$$
+	O similmente:
+	$$\forall \epsilon > 0 \quad \exists \bar k \in N \quad \forall k > \bar k\quad \|S_k - f\|_\infty < \epsilon$$
+- Converge _totalmente_ su $A' \subset A$:
+	$$\sum_{k=0}^\infty \|f\|_\infty < \infty$$
+	Ovvero che:
+	$$\sum_{k = 0}^\infty \sup_{x \in A'}(|f_k(x)|) < \infty$$
+---
+#### Convergenza Totale e Uniforme
+La convergenza totale è una implicazione molto forte, infatti ci dice che la serie formata dagli estremi superiori di tutte le funzioni converge, variando, quindi, l'ascissa della x.
+è semplice osservare che una serie _totalmente_ convergente è anche _puntualmente_ convergente.
+Si ha infatti che, con una semplice applicazione del _teorema del confronto per serie_ che:
+###### Dimostrazione
+Poiché si ha che $$\sum_{k = 0}^\infty \sup_{x \in A'}(|f_k(x)|) < \infty$$
+si ha che:
+$$\forall x \in A' \quad \sup_{x \in A'}(|f_k(x)|) > |f_k(x)| \quad \forall k \in \mathbb R$$
+ Quindi, per il _teorema del confronto_, possiamo concludere che la serie converge puntualmente su $A'$ poiché $f_k(x)$ converge assolutamente.
+$\square$
+Chiamiamo adesso $$f(x) = \sum_{k = 0}^\infty f_k(x)$$
+Possiamo dimostrare la seguente implicazione:
+$$f \ \text{converge totalmente} \implies f \ \text{converge uniformemente}$$
+###### Dimostrazione
+Dobbiamo far vedere che:
+$$\forall \epsilon > 0 \quad \exists \bar n \in \mathbb N \quad \forall n > \bar n \quad |S_n(x) - f(x)| < \epsilon \quad \forall x \in A'$$
+Osserviamo però che $|f(x) - S_n(x)| = \left|\sum_{k = n + 1}^\infty f_k\right|$ 
+Ma possiamo vedere che:
+$$\left|\sum_{k = n + 1}^\infty f_k(x)\right| \leq \sum_{k = n + 1}^\infty |f_k(x)| \leq \sum_{k=n + 1}^\infty \|f\|_\infty < \epsilon$$
+L'ultima disuguaglianza è data perché la coda di una serie _convergente_ è _infinitesima_.
+$\square$
+---
+
+
