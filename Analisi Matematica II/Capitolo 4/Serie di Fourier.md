@@ -196,3 +196,18 @@ $$\leq \sum_{k = 0}^\infty \|a_k\|_\infty + \|b_k\|_\infty \leq \sum_{k = 0}^\in
 Utilizzando adesso due volte la disuguaglianza $st \le \frac{1}{2}s^2 + \frac{1}{2}t^2$ 
 $$\sum_{k = 0}^\infty \frac{1}{k^2} + \frac{1}{2} \sum_{k = 0}^\infty \beta_k^2 + \alpha_k^2 < \infty$$
 quindi la serie di Fourier converge uniformemente a $f$ su $[-\pi, \pi]$.
+##### Corollario
+Se $f \in \mathcal C^1$ ed è $2\pi$ periodica allora la *disuguaglianza di Bessel* diventa un uguaglianza:
+$$\frac{1}{\pi}\int_{-\pi}^{\pi} f^2(x) dx = \frac{a^2_0}{2} + \sum_{k = 1}^{\infty}a_k^2 + b_k^2$$
+###### Dimostrazione
+Si ha che 
+$S_n \xrightarrow{\text{unif}} f$ e quindi che $S_n^2 \xrightarrow{\text{unif}} f^2$
+da un teorema sulle funzioni uniformemente convergenti si ha che:
+$$\int_{-\pi}^\pi S_n^2(x) \, dx \to \int_{-\pi}^\pi f^2(x) \, dx$$
+Ma nella dimostrazione del teorema di Bessel avevamo visto che:
+$$\int_{-\pi}^\pi S_n^2(x) \, dx = \pi\left(\frac{a_0^2}{2}+ \sum_{k = 0}^\infty a_k^2 + b_k^2\right)$$
+e quindi:
+$$\frac{1}{\pi}\int_{-\pi}^{\pi} S_n^2(x) dx \to \frac{a^2_0}{2} + \sum_{k = 1}^{\infty}a_k^2 + b_k^2$$
+dalla continuità di $f$ e quindi di $f^2$ si ha che 
+$$\frac{1}{\pi}\int_{-\pi}^{\pi} f^2(x) dx = \frac{a^2_0}{2} + \sum_{k = 1}^{\infty}a_k^2 + b_k^2$$
+$\square$
