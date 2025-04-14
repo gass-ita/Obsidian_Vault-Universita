@@ -6,16 +6,16 @@ $$\forall \epsilon > 0, \quad \exists \bar{k} \in \mathbb{N}: \quad \forall k > 
 #### Definiamo una Norma
 Sia $\mathcal{F}_b(E)$ l'insieme formato da tutte le funzioni _limitate_ definite sull'insieme $E$
 definiamo la _norma infinito_ su questo insieme come:
-$$f \in \mathcal{F}_b(E) \quad ||f||_\infty = \sup_{x \in E}\{|f(x)|\}$$
+$$f \in \mathcal{F}_b(E) \quad \|f\|_\infty = \sup_{x \in E}\{|f(x)|\}$$
 Se voglio limitarmi su un sottoinsieme $A \subset E$
-$$||f||_{\infty,\,A} = \sup_{x \in A}\{|f(x)|\}$$
+$$\|f\|_{\infty,\,A} = \sup_{x \in A}\{|f(x)|\}$$
 Osserviamo una somiglianza tra la definizione di _tendenza uniforme_ e di _norma infinito_ possiamo infatti dimostrare la seguente equivalenza:
 
-$$f_k \rightarrow_u f \Leftrightarrow ||f_k - f||_\infty \rightarrow 0$$
+$$f_k \rightarrow_u f \Leftrightarrow \|f_k - f\|_\infty \rightarrow 0$$
 si può vedere infatti che
 $$f_k \rightarrow_u f \Leftrightarrow \forall \epsilon > 0, \quad \exists \bar{k} \in \mathbb{N}: \quad \forall k > \bar{k} \quad |f_k(x) - f(x)| < \epsilon \quad \forall x \in A$$
 ovvero:
-$$\forall \epsilon > 0, \quad \exists \bar{k} \in \mathbb{N}: \quad \forall k > \bar{k} \quad ||f_k(x) - f(x)||_\infty < \epsilon$$
+$$\forall \epsilon > 0, \quad \exists \bar{k} \in \mathbb{N}: \quad \forall k > \bar{k} \quad \|f_k(x) - f(x)\|_\infty < \epsilon$$
 In modo intuitivo possiamo definire una distanza $d_\infty:  \mathcal{F}_b(E) \times  \mathcal{F}_b(E) \rightarrow \mathbb{R}^+$ definita come $d_\infty(f, g) = ||f - g||_\infty$ 
 Se costruiamo adesso lo _spazio metrico_ costituito da $(\mathcal{F}_b(E), d_\infty)$ si ha che
 $$f_k \rightarrow f \Leftrightarrow f_k \rightarrow_u f$$
@@ -27,17 +27,17 @@ inoltre si ha che
 $$||f_k||_\infty \rightarrow ||f||_\infty$$
 #### Dimostrazione
 Dalla proprietà triangolare delle norme si ha che
-1. $||f_k - f||_\infty + ||f_k||_\infty \geq ||f||_\infty$
-2. $||f_k - f||_\infty + ||f||_\infty \geq ||f_k||_\infty$
+1. $\|f_k - f\|_\infty + \|f_k\|_\infty \geq \|f\|_\infty$
+2. $\|f_k - f\|_\infty + \|f\|_\infty \geq \|f_k\|_\infty$
 Per dimostrare che $f \in \mathcal{F}_b(E)$ basterà far vedere che $||f||_\infty < \infty$
 Dalla prima disuguaglianza si ha che:
-$$||f - f_k||_\infty + ||f_k||_\infty \geq ||f||_\infty$$
+$$\|f - f_k\|_\infty + \|f_k\|_\infty \geq \|f\|_\infty$$
 Ricordando $f_k$ è limitata $||f_k||_\infty < \infty$ inoltre, dato che $f_k \rightarrow_u f$ si ha che:
-$$\forall \epsilon > 0, \quad \exists \bar{k} \in \mathbb{N}: \quad \forall k > \bar{k} \quad ||f_k(x) - f(x)||_\infty < \epsilon$$
+$$\forall \epsilon > 0, \quad \exists \bar{k} \in \mathbb{N}: \quad \forall k > \bar{k} \quad \|f_k(x) - f(x)\|_\infty < \epsilon$$
 quindi
-$$||f||_\infty < \infty$$
+$$\|f\|_\infty < \infty$$
 inoltre mettendo a sistema le due disequazioni si ha che
-$$ \bigl\lvert ||f_k||_\infty - ||f||_\infty\bigr\lvert \leq ||f_k - f||_\infty < \epsilon $$
+$$ \bigl | \|f_k\|_\infty - \|f\|_\infty \bigr| \leq \|f_k - f\|_\infty < \epsilon $$
 Che, dalla definizione di limite valida la tesi. $\square$
 
 ## Lo spazio metrico $\mathcal{C}_b(E)$ 
@@ -65,12 +65,12 @@ $$f_k \text{ di Cauchy } \Rightarrow f_k \rightarrow_u f$$
 #### Dimostrazione 
 Prendiamo una generica successione di funzioni di Cauchy $(f_k) \subset \mathcal{C}_b(E)$
 si avrà quindi che:
-$$\forall \epsilon > 0, \quad \exists \bar{k}: \quad \forall h,k > \bar{k} \quad ||f_k - f_h||_\infty < \epsilon$$
+$$\forall \epsilon > 0, \quad \exists \bar{k}: \quad \forall h,k > \bar{k} \quad \|f_k - f_h\|_\infty < \epsilon$$
 fissato un $x \in E$ 
 $$\forall \epsilon > 0, \quad \exists \bar{k}: \quad \forall h,k > \bar{k} \quad |f_k(x) - f_h(x)| < \epsilon$$
 Abbiamo quindi una successione reale di Cauchy, quindi che $f_k \rightarrow_p f$ 
 Facendo tendere adesso $h \rightarrow \infty$ otteniamo che:
-$$\forall \epsilon > 0, \quad \exists \bar{k}: \quad \forall h,k > \bar{k} \quad ||f_k - f||_\infty < \epsilon$$
+$$\forall \epsilon > 0, \quad \exists \bar{k}: \quad \forall h,k > \bar{k} \quad \|f_k - f\|_\infty < \epsilon$$
 e quindi che $f_k \rightarrow_u f$. $\square$
 
 ## Integrali di una Successione di Funzioni
