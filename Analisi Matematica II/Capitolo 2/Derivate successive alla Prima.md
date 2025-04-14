@@ -50,7 +50,7 @@ Quindi otteniamo che, applicando nuovamente _Lagrange_
 $$G(h, k) = H(\bar x_2 + k) - H (\bar x_2)$$
 e quindi che:
 $$G(h, k) = \frac{\partial^2 f}{\partial x_1 \partial x_2}(\xi_1, \xi_2) hk \quad \xi_2 \in \{\bar x_2, \bar x_2+k\}$$
-Procedendo in modo analogo con gli opportuni aggiustamenti otteniamo che:
+Procedendo in modo analogo con gli opportuni aggiustamenti $(G_2(t) = f(\bar x_1 + h, t) - f(\bar x_1, t))$ otteniamo che:
 $$G(h, k) = \frac{\partial^2 f}{\partial x_2 \partial x_1}(\eta_1, \eta_2) hk \quad \eta_1 \in \{\bar x_1, \bar x_1 + h\} \quad \eta_2 \in \{\bar x_2, \bar x_2 + k\}$$
 e quindi che 
 
