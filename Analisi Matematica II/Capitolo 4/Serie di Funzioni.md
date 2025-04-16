@@ -36,4 +36,12 @@ L'ultima disuguaglianza è data perché la coda di una serie _convergente_ è _i
 $\square$
 ---
 
-
+### Fatti utili negli esercizi
+##### Teorema di Abel
+Sia:
+$$\sum_{k=0}^\infty a_k (x - x_0)^k$$
+una serie di potenze con raggio di convergenza $R > 0$
+si ha che:
+- se la serie converge puntualmente per $x = x_0 + R$ allora la serie convergerà _uniformemente_ su $(x_0 - R, x_0 + R]$
+-  se la serie converge puntualmente per $x = x_0 - R$ allora la serie convergerà _uniformemente_ su $[x_0 - R, x_0 + R)$
+-  se la serie converge puntualmente per $x = x_0 - R$ e $x = x_0 + R$allora la serie convergerà _uniformemente_ su $[x_0 - R, x_0 + R]$

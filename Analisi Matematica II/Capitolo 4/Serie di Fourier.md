@@ -196,7 +196,7 @@ $$\leq \sum_{k = 0}^\infty \|a_k\|_\infty + \|b_k\|_\infty \leq \sum_{k = 0}^\in
 Utilizzando adesso due volte la disuguaglianza $st \le \frac{1}{2}s^2 + \frac{1}{2}t^2$ 
 $$\sum_{k = 0}^\infty \frac{1}{k^2} + \frac{1}{2} \sum_{k = 0}^\infty \beta_k^2 + \alpha_k^2 < \infty$$
 quindi la serie di Fourier converge uniformemente a $f$ su $[-\pi, \pi]$.
-##### Corollario
+#### Corollario
 Se $f \in \mathcal C^1$ ed è $2\pi$ periodica allora la *disuguaglianza di Bessel* diventa un uguaglianza:
 $$\frac{1}{\pi}\int_{-\pi}^{\pi} f^2(x) dx = \frac{a^2_0}{2} + \sum_{k = 1}^{\infty}a_k^2 + b_k^2$$
 ###### Dimostrazione

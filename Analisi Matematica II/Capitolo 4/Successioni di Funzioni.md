@@ -167,3 +167,15 @@ $$
 $$
 $\square$ 
  
+ ---
+### Fatti utili negli esercizi
+##### Teorema di tendenza uniforme
+Sia $(f_n)$ una successione di funzioni definite su un intervallo aperto $(a, b)$, e supponiamo che $f_n \to f$ **puntualmente** su $(a, b)$.
+
+Allora, per ogni $\delta > 0$, la convergenza è **uniforme** su $[a + \delta, b - \delta]$, cioè:
+
+$$
+\forall \varepsilon > 0, \ \exists N \in \mathbb{N} \ \text{tale che} \ \forall n \geq N, \ \forall x \in [a + \delta, b - \delta], \ |f_n(x) - f(x)| < \varepsilon.
+$$
+
+In altre parole, la convergenza puntuale su $(a, b)$ implica la convergenza uniforme su ogni sotto intervallo chiuso contenuto strettamente in $(a, b)$.
