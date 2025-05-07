@@ -132,3 +132,13 @@ Scegliendo adesso $\vec v = \gamma (b) - \gamma (a)$, e ricordando che il prodot
 $$\|\gamma (b)) - \gamma (a)\|^2 \leq \|\gamma (b)) - \gamma (a)\| \ L(\gamma)$$
 e quindi la tesi che:
 $$\|\gamma (b)) - \gamma (a)\| \leq L(\gamma)$$
+### Integrale su una curva di prima specie
+Il concetto di _prima specie_ va a sottolineare il fatto che questo integrale viene eseguito su una funzione che restituisce valori in $\mathbb R$.
+Per calcolare l'integrale su una curva si utilizza il concetto di lunghezza della curva stessa.
+Ricordando che la lunghezza di una curva regolare $\gamma$ è data da:
+$$L(\gamma) := \int_{t_0}^{t1}\|\dot \gamma(t)\| \, dt$$
+L'integrale di una funzione $f: \gamma([a, b]) \subset A \to \mathbb R$ non è altro che l'integrale della funzione calcolata nel punto $\gamma(t)$ per la lunghezza della base ovvero $\|\dot \gamma(t)\|$ 
+$$\int_\gamma f \, d\vec s := \int_a^b f(\gamma(t)) \, \|\dot \gamma(t)\| \, dt$$
+Inoltre se la curva $\gamma$ fosse chiusa, ovvero se $\gamma(a) = \gamma(b)$ si sottolinea questo fattore scrivendo:
+$$\oint_\gamma f d\vec s$$
+La definizione, però, non subisce variazioni.
