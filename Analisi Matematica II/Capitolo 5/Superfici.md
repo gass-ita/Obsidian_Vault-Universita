@@ -64,3 +64,69 @@ Osserviamo che la funzione $f$ si annulla in questo punto e che inoltre la deriv
 Localmente, quindi, sarà possibile esplicitare il grafico di $f$ come una funzione dipendente solo da $x$:
 $$y(x) = \sqrt{1 - x^2}$$
 ![[Pasted image 20250504144605.png]]Vediamo come il grafico mostrato rappresenta esattamente il luogo degli zeri della funzione viola
+
+#### Dimostrazione
+Abbiamo da ipotesi che
+$$\frac{\partial f}{\partial y} (x_0, y_0)\neq 0$$
+Senza perdere di generalità supponiamo che il suo valore sia negativo.
+$$\frac{\partial f}{\partial y} (x_0, y_0) < 0$$
+poiché la funzione $f \in C^1$ si ha che $\frac{\partial f}{\partial y}$ è continua si ha quindi che in un determinato intorno di $(x_0 , y_0)$ la derivata di $f$ rispetto a $y$ è sempre negativa.
+$$\exists \hat I \times J = \left[x_0 - \hat \delta; x_0 + \hat \delta \right] \times \left[y_0 -  \eta; y_0 + \eta \right]$$
+Dove si ha che:
+$$\forall (x, y) \in \hat I \times J \frac{\partial f}{\partial y} (x, y) < 0$$
+Questo significa che se prendiamo la funzione $y: J \to \mathbb R$ che manda:
+$$y \to F(x_0, y)$$
+è monotona decrescente, e, inoltre, dalle ipotesi si ha che si annulla in $y = y_0$.
+in particolare si avrà quindi che:
+$$F(x_0, y) < 0 \quad \forall y \in (y_0, y_0+\eta]$$
+$$F(x_0, y) > 0 \quad \forall y \in [y_0 -\eta, y_0)$$
+e in particolare:
+$$F(x_0, y_0 + \eta) < 0$$
+$$F(x_0, y_0 - \eta) > 0 $$
+![[Pasted image 20250509171750.png]]
+Per la continuità di F si avrà anche che esiste un intorno di $x_0$ con le proprietà descritte sopra e quindi avremo che:
+$$\exists I = \left[x_0 - \delta; x_0 + \delta \right]$$
+$$F(x, y_0 + \eta) < 0 \quad \forall x \in I$$
+$$F(x, y_0 - \eta) > 0 \quad \forall x \in I$$
+inoltre la funzione risulta ancora continua quindi, dal _teorema degli zeri_ esisterà una $y$ che annulla $F$
+e inoltre data la sua monotonia sarà anche _unico_:
+$$\exists! \,  y \in [y_0 - \eta; y_0 + \eta]: F(x, y) = 0$$
+e questa $y$ sarà univocamente determinata da $x$
+$$\forall x \in I \quad  \exists!\,  y_x \in [y_0 - \eta; y_0 + \eta]: F(x, y_x) = 0$$
+$\square$
+Passiamo alla seconda parte del teorema
+Vediamo adesso che, se chiamiamo $g$ la funzione che porta $x \to y$ la sua derivata è continua e risulta che
+$$\frac{d}{dx}g =  -\frac{\frac{\partial F}{\partial x}(x, g(x))}{{\frac{\partial F}{\partial y}(x, g(x))}}$$
+Introduciamo per questo una funzione:
+$$H: [0; 1] \to \mathbb R$$ dove
+$$H(t) = F(x_1+t(x_2 - x_1); g(x_1) + t(g(x_2) - g(x_1)))$$
+Si tratta della parametrizzazione della retta che porta da $(x_1; g(x_1)) \to (x_2; g(x_2))$.
+dove $x_1$ e $x_2$ sono gli estremi del dominio di $g$, quelli che prima chiamavamo $x_0 - \delta$ e $x_0 + \delta$
+abbiamo naturalmente che:
+$$H(0) = 0 = H(1)$$
+inoltre è una funzione continua perché composizione di continue.
+Calcoliamo la derivata di $H$
+si tratta di integrare una funzione composta:
+$$G(t) = (x_1+t(x_2 - x_1); g(x_1) + t(g(x_2) - g(x_1))$$
+$$G'(t) = (x_2 - x_1; g(x_2) - g(x_1))$$
+mentre il gradiente di $F$ è dato da $$\nabla F = \left(\frac{\partial F}{\partial x}, \frac{\partial F}{\partial y}\right)$$
+La derivata risulterà quindi il prodotto scalare tra $G'(t) \cdot \nabla F$ che risulta:
+$$(x_2 - x_1; g(x_2) - g(x_1)) \, \cdot \, \left(\frac{\partial F}{\partial x}, \frac{\partial F}{\partial y}\right) =  \frac{\partial F}{\partial x}(x_2 - x_1) + \frac{\partial F}{\partial y} (g(x_2) - g(x_1))$$
+Osserviamo che anche $H'$ risulta continua perché dipende solo dalle derivate parziali di $F$ che per ipotesi sono continue.
+Abbiamo le ipotesi per applicare Rolle, sappiamo quindi che $H'(\xi) = 0$.
+Si ha quindi che:
+per un $t = \xi$
+$$\frac{\partial F}{\partial x}(x_1+\xi(x_2 - x_1), g(x_1) + \xi(g(x_2) - g(x_1))(x_2 - x_1) = - \frac{\partial F}{\partial y}(x_1+\xi(x_2 - x_1) , g(x_1) + \xi(g(x_2) - g(x_1)) (g(x_2) - g(x_1))$$
+Poiché $I \times J$ è chiuso e compatto e le derivate di $F$ sono continue esisterà:
+$$\exists M, m: m = \min_{x \in I \times J}\left(\left|\frac{\partial F}{\partial y}(x)\right|\right) \quad M=\max_{x \in I \times J}\left(\left|\frac{\partial F}{\partial x}(x)\right|\right)$$
+Otteniamo quindi che
+$$\frac{\frac{\partial F}{\partial x}(\dots)}{- \frac{\partial F}{\partial y}(\dots) }|x_2 - x_1| = |g(x_2) - g(x_1)|$$
+e quindi che:
+$$|g(x_2) - g(x_1)| \leq \frac{M}{m}|x_2 - x_1|$$
+e quindi $g$ è _lipschitziana_ e di conseguenza continua.
+infine per ottenere la derivata osserviamo che:
+$$\frac{\frac{\partial F}{\partial x}(x_1+\xi(x_2 - x_1), g(x_1) + \xi(g(x_2) - g(x_1))}{- \frac{\partial F}{\partial y}(x_1+\xi(x_2 - x_1) , g(x_1) + \xi(g(x_2) - g(x_1)) } = \frac{(g(x_2) - g(x_1))}{(x_2 - x_1)}$$
+se facciamo tendere $x_2 \to x_1$ otteniamo che $\xi \to 0$ e quindi otteniamo che
+$$g'(x) = \frac{\frac{\partial F}{\partial x}(x, g(x))}{- \frac{\partial F}{\partial y}(x , g(x)) }$$
+Che essendo composizione di funzioni conintue $g'$ risulterà continua.
+$\square$ 
