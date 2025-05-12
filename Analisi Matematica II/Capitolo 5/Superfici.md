@@ -3,9 +3,9 @@ Il prodotto vettoriale è una funzione che associa una coppia di vettori ad un t
 In generale se abbiamo 2 vettori il prodotto scalare tra questi è:
 $$
 \left|\begin{pmatrix}
+\vec e_1, & \vec e_2, & \vec e_3 \\
 a_1, & a_2, & a_3 \\
 b_1, & b_2, & b_3 \\
-\vec e_1, & \vec e_2, & \vec e_3
 \end{pmatrix}\right| = (a_2b_3 - a_3b_2,\, a_3b_1 -a_1 b_3,\,a_1b_2 - a_2 b_1)
 $$
 Questa operazione ha delle peculiarità particolari.
