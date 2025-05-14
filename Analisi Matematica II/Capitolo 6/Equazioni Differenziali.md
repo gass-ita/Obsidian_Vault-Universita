@@ -53,3 +53,20 @@ Diremo, infatti, che una funzione $f(t, u)$ di questo tipo è _localmente lipshi
 $$\exists c > 0: \quad \|f(t, u) - f(t, v)\| \leq c \, \|u - v\| \quad \forall (t, u) \in U $$
 Si può dimostrare che condizione necessaria e sufficiente affinché una funzione $g(t)$ è _lipshipziana_ è far vedere che $g'(t)$ è limitata:
 $$|g(u) - g(v)| = \left|\int_u^v g'(s)\right| \, ds \leq \int_u^v |g'(s)| \, ds \leq \int_u^v C \, ds = C(u - v) = C |u - v|$$
+#### Teorema per funzioni del 1° ordine
+Sia $f: A \subset (I \times \mathbb R) \to \mathbb R$ una funzione di classe $\mathcal C^1$, e quindi _lipshipziana_ per la seconda variabile, e siano $(t_0, u_0) \in A$ 
+sia dato il seguente _problema di Cauchy_
+$$\begin{cases} u'(t) = f(t, u(t)) \\ u(t_0) = u_0\end{cases}$$
+Si avrà allora che:
+$$\exists \, r_0 : \, \exists! \, u:(t_0 - r_0, t_0 + r_0) \to [u_0 - \rho, u_0 - \rho] \, \text{soluzione del sistema}$$
+
+
+
+
+
+
+
+
+
+
+
